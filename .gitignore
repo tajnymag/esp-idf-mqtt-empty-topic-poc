@@ -1,0 +1,13 @@
+# IDE
+.idea/
+
+# cmake
+build/
+cmake-build-debug*/
+
+# sdkconfig
+sdkconfig
+sdkconfig.old
+
+# dependencies
+managed_components/

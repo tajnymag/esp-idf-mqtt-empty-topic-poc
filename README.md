@@ -1,4 +1,4 @@
-# POC for {{placeholder}}
+# POC for esp-protocols [issue #369](https://github.com/espressif/esp-protocols/issues/369)
 
 When mqtt client receives data in multiple chunks, events after the first chunk are missing topic. This makes it hard to distinguish, which handler should handle the incoming event.
 

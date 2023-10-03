@@ -2,7 +2,7 @@
 
 When mqtt client receives data in multiple chunks, events after the first chunk are missing topic. This makes it hard to distinguish, which handler should handle the incoming event.
 
-The system crash in the logs is not directly related to the issue. It is only a consequence of the example trying to log an empty pointer.
+The system crash in the logs is not directly related to the issue. It is only a consequence of the example trying to access the empty topic pointer.
 
 ## Steps to reproduce
 

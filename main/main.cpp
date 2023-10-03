@@ -29,6 +29,9 @@ public:
     using mqtt::Client::Client;
 
 private:
+    // to suppress empty "Subcribed to" lines due to a bug in esp_mqtt_cxx: "^0.1.0"
+    void on_subscribed(esp_mqtt_event_handle_t const event) override {}
+
     void on_connected(esp_mqtt_event_handle_t const event) override
     {
         subscribe(example_topic.get());

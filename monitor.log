@@ -1,0 +1,152 @@
+I (30) boot: ESP-IDF v5.1.1 2nd stage bootloader
+I (31) boot: compile time Oct  3 2023 16:13:31
+I (31) boot: Multicore bootloader
+I (35) boot: chip revision: v1.0
+I (39) boot.esp32: SPI Speed      : 40MHz
+I (43) boot.esp32: SPI Mode       : DIO
+I (48) boot.esp32: SPI Flash Size : 2MB
+I (52) boot: Enabling RNG early entropy source...
+I (58) boot: Partition Table:
+I (61) boot: ## Label            Usage          Type ST Offset   Length
+I (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (83) boot:  2 factory          factory app      00 00 00010000 00100000
+I (91) boot: End of partition table
+I (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=294b8h (169144) map
+I (165) esp_image: segment 1: paddr=000394e0 vaddr=3ffb0000 size=03728h ( 14120) load
+I (171) esp_image: segment 2: paddr=0003cc10 vaddr=40080000 size=03408h ( 13320) load
+I (176) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=995cch (628172) map
+I (406) esp_image: segment 4: paddr=000d95f4 vaddr=40083408 size=12348h ( 74568) load
+I (448) boot: Loaded app from partition at offset 0x10000
+I (448) boot: Disabling RNG early entropy source...
+I (459) cpu_start: Multicore app
+I (460) cpu_start: Pro cpu up.
+I (460) cpu_start: Starting app cpu, entry point is 0x4008137c
+0x4008137c: call_start_cpu1 at /home/marek/esp/esp-idf-v5.1/components/esp_system/port/cpu_start.c:154
+
+I (0) cpu_start: App cpu up.
+I (478) cpu_start: Pro cpu start user code
+I (478) cpu_start: cpu freq: 160000000 Hz
+I (478) cpu_start: Application information:
+I (482) cpu_start: Project name:     esp-idf-mqtt-empty-topic-poc
+I (489) cpu_start: App version:      1
+I (494) cpu_start: Compile time:     Oct  3 2023 16:13:29
+I (500) cpu_start: ELF file SHA256:  437041f2d3bf193a...
+I (506) cpu_start: ESP-IDF:          v5.1.1
+I (510) cpu_start: Min chip rev:     v0.0
+I (515) cpu_start: Max chip rev:     v3.99
+I (520) cpu_start: Chip rev:         v1.0
+I (525) heap_init: Initializing. RAM available for dynamic allocation:
+I (532) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (538) heap_init: At 3FFB7E18 len 000281E8 (160 KiB): DRAM
+I (544) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (551) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (557) heap_init: At 40095750 len 0000A8B0 (42 KiB): IRAM
+I (565) spi_flash: detected chip: gd
+I (567) spi_flash: flash io: dio
+W (571) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (585) app_start: Starting scheduler on CPU0
+I (590) app_start: Starting scheduler on CPU1
+I (590) main_task: Started on CPU0
+I (600) main_task: Calling app_main()
+I (600) MQTT_EXAMPLE: [APP] Startup..
+I (600) MQTT_EXAMPLE: [APP] Free memory: 279248 bytes
+I (610) MQTT_EXAMPLE: [APP] IDF version: v5.1.1
+I (680) wifi:wifi driver task: 3ffbfffc, prio:23, stack:6656, core=0
+I (710) wifi:wifi firmware version: ce9244d
+I (710) wifi:wifi certification version: v7.0
+I (710) wifi:config NVS flash: enabled
+I (710) wifi:config nano formating: disabled
+I (710) wifi:Init data frame dynamic rx buffer num: 32
+I (720) wifi:Init management frame dynamic rx buffer num: 32
+I (720) wifi:Init management short buffer num: 32
+I (730) wifi:Init dynamic tx buffer num: 32
+I (730) wifi:Init static rx buffer size: 1600
+I (730) wifi:Init static rx buffer num: 10
+I (740) wifi:Init dynamic rx buffer num: 32
+I (740) wifi_init: rx ba win: 6
+I (750) wifi_init: tcpip mbox: 32
+I (750) wifi_init: udp mbox: 6
+I (750) wifi_init: tcp mbox: 6
+I (760) wifi_init: tcp tx win: 5744
+I (760) wifi_init: tcp rx win: 5744
+I (760) wifi_init: tcp mss: 1440
+I (770) wifi_init: WiFi IRAM OP enabled
+I (770) wifi_init: WiFi RX IRAM OP enabled
+I (780) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07
+I (880) wifi:mode : sta (9c:9c:1f:f3:25:08)
+I (880) wifi:enable tsf
+I (890) wifi_init_sta: wifi_init_sta finished.
+I (890) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (900) wifi:state: init -> auth (b0)
+I (900) wifi:state: auth -> assoc (0)
+I (910) wifi:state: assoc -> run (10)
+I (920) wifi:connected with ***REMOVED***, aid = 3, channel 1, BW20, bssid = 40:3f:8c:a6:92:23
+I (920) wifi:security: WPA2-PSK, phy: bgn, rssi: -58
+I (930) wifi:pm start, type: 1
+
+I (1000) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+I (1930) esp_netif_handlers: sta ip: 192.168.2.219, mask: 255.255.255.0, gw: 192.168.2.1
+I (1930) wifi_init_sta: got ip:192.168.2.219
+I (1930) wifi_init_sta: connected to ap SSID:***REMOVED*** password:***REMOVED***
+I (1940) mqtt_client_cpp: MQTT_EVENT_BEFORE_CONNECT
+I (1950) wifi:<ba-add>idx:0 (ifx:0, 40:3f:8c:a6:92:23), tid:0, ssn:1, winSize:64
+I (2340) mqtt_client_cpp: MQTT_EVENT_CONNECTED
+I (2540) mqtt_client_cpp: MQTT_EVENT_SUBSCRIBED, msg_id=5127
+I (45150) mqtt_client_cpp: MQTT_EVENT_DATA
+I (45150) MQTT_EXAMPLE: Received message with msg_id: 0
+I (45160) MQTT_EXAMPLE:  - event_id: 6
+I (45160) MQTT_EXAMPLE:  - topic: example/topic
+I (45160) MQTT_EXAMPLE:  - topic_len: 13
+I (45170) MQTT_EXAMPLE:  - total_data_len: 1048576
+I (45170) MQTT_EXAMPLE:  - data_len: 1005
+I (45180) MQTT_EXAMPLE:  - current_data_offset: 0
+I (45180) MQTT_EXAMPLE: Received in the messages topic
+I (45190) mqtt_client_cpp: MQTT_EVENT_DATA
+I (45190) MQTT_EXAMPLE: Received message with msg_id: 0
+I (45200) MQTT_EXAMPLE:  - event_id: 6
+I (45200) MQTT_EXAMPLE:  - topic:
+I (45210) MQTT_EXAMPLE:  - topic_len: 0
+I (45210) MQTT_EXAMPLE:  - total_data_len: 1048576
+I (45220) MQTT_EXAMPLE:  - data_len: 1024
+I (45220) MQTT_EXAMPLE:  - current_data_offset: 1005
+Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x40161299  PS      : 0x00060530  A0      : 0x800d7ed4  A1      : 0x3ffc8170
+0x40161299: bool __gnu_cxx::__ops::_Iter_equal_to_iter::operator()<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) const at /home/marek/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/xtensa-esp32-elf/include/c++/12.2.0/bits/predefined_ops.h:117 (discriminator 1)
+ (inlined by) std::pair<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::__mismatch<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__ops::_Iter_equal_to_iter>(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__ops::_Iter_equal_to_iter) at /home/marek/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/xtensa-esp32-elf/include/c++/12.2.0/bits/stl_algobase.h:1882 (discriminator 1)
+
+A2      : 0x3ffba0d8  A3      : 0x3ffba0e5  A4      : 0x00000000  A5      : 0x00000000
+A6      : 0x3ffc7e80  A7      : 0x00000002  A8      : 0x8015ad88  A9      : 0x3ffc7e40
+A10     : 0x00000065  A11     : 0xffffffff  A12     : 0x00000040  A13     : 0x3ffc8050
+A14     : 0x3ffc7e50  A15     : 0x00000003  SAR     : 0x00000004  EXCCAUSE: 0x0000001c
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffc
+
+
+Backtrace: 0x40161296:0x3ffc8170 0x400d7ed1:0x3ffc81a0 0x400d7f71:0x3ffc81f0 0x400d71e9:0x3ffc8210 0x400d7ad9:0x3ffc8240 0x40166cc1:0x3ffc8260 0x40166746:0x3ffc8290 0x400d82d1:0x3ffc82d0 0x400d8b98:0x3ffc82f0 0x400d8cef:0x3ffc8320 0x400d91d4:0x3ffc8350 0x4008b651:0x3ffc8380
+0x40161296: bool __gnu_cxx::__ops::_Iter_equal_to_iter::operator()<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) const at /home/marek/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/xtensa-esp32-elf/include/c++/12.2.0/bits/predefined_ops.h:117 (discriminator 1)
+ (inlined by) std::pair<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::__mismatch<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__ops::_Iter_equal_to_iter>(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__ops::_Iter_equal_to_iter) at /home/marek/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/xtensa-esp32-elf/include/c++/12.2.0/bits/stl_algobase.h:1882 (discriminator 1)
+
+0x400d7ed1: std::pair<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::mismatch<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) at /home/marek/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/xtensa-esp32-elf/include/c++/12.2.0/bits/stl_algobase.h:1917
+ (inlined by) idf::mqtt::Filter::match(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >) const at /home/marek/Projekty/esp-idf-mqtt-empty-topic-poc/managed_components/espressif__esp_mqtt_cxx/esp_mqtt_cxx.cpp:284
+
+0x400d7f71: idf::mqtt::Filter::match(char*, int) const at /home/marek/Projekty/esp-idf-mqtt-empty-topic-poc/managed_components/espressif__esp_mqtt_cxx/esp_mqtt_cxx.cpp:311
+
+0x400d71e9: (anonymous namespace)::MyClient::on_data(esp_mqtt_event_t*) at /home/marek/Projekty/esp-idf-mqtt-empty-topic-poc/main/main.cpp:49
+
+0x400d7ad9: idf::mqtt::Client::mqtt_event_handler(void*, char const*, long, void*) at /home/marek/Projekty/esp-idf-mqtt-empty-topic-poc/managed_components/espressif__esp_mqtt_cxx/esp_mqtt_cxx.cpp:183 (discriminator 13)
+
+0x40166cc1: handler_execute at /home/marek/esp/esp-idf-v5.1/components/esp_event/esp_event.c:137
+
+0x40166746: esp_event_loop_run at /home/marek/esp/esp-idf-v5.1/components/esp_event/esp_event.c:593 (discriminator 3)
+
+0x400d82d1: esp_mqtt_dispatch_event at /home/marek/esp/esp-idf-v5.1/components/mqtt/esp-mqtt/mqtt_client.c:985
+
+0x400d8b98: deliver_publish at /home/marek/esp/esp-idf-v5.1/components/mqtt/esp-mqtt/mqtt_client.c:1052 (discriminator 4)
+
+0x400d8cef: mqtt_process_receive at /home/marek/esp/esp-idf-v5.1/components/mqtt/esp-mqtt/mqtt_client.c:1331 (discriminator 15)
+
+0x400d91d4: esp_mqtt_task at /home/marek/esp/esp-idf-v5.1/components/mqtt/esp-mqtt/mqtt_client.c:1592
+
+0x4008b651: vPortTaskWrapper at /home/marek/esp/esp-idf-v5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
